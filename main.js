@@ -1,11 +1,19 @@
 $(document).ready(function () {
+  $("body").hide().fadeIn(2000);
+});
+
+$(document).ready(function () {
   $("#to_do_input").change(function () {
     let input = $(this).val();
-    $("ul").append(
-      "<li>" +
-        input +
-        '<i class="fas fa-check"></i><i class="fas fa-trash"></i> </li>'
-    );
+    $("ul")
+      .append(
+        "<li>" +
+          input +
+          '<i class="fas fa-check"></i><i class="fas fa-trash"></i> </li>'
+      )
+      .find("li:last")
+      .hide()
+      .fadeIn(1500);
     $(this).val("");
   });
 

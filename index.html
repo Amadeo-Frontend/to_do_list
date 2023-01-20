@@ -10,20 +10,21 @@
     <title>To do list</title>
 </head>
 <body>
-
-    <section>
-        <div class="container">
-        <h2>Lista de tarefas</h2>
-        <div class="inputBox"> 
-            <input type="text"id="to_do_input" placeholder="Nome da tarefa">
-        </div>
-        <div class="inputBox">
-            <input class="btn" type="submit">
-        </div>
+    
+    <div class="container">
+        <header> 
+            <h2>Lista de tarefas</h2>
+        </header>
         
-        <ul></ul>
+        <form>
+            <input type="text"id="to_do_input" placeholder="Digite sua tarefa" required>
+            
+            <button class="btn-hover color" type="submit"><i class="fa fa-plus"></i></button>
+            
+            
+        </form> 
+         <ul></ul>
     </div>
-</section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./main.js"></script>

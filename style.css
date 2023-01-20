@@ -1,54 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background-color: #111927;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
 }
 
-input{
-   display: inline;
-   align-items: center;
+.container {
+    max-width: 860px;
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
 }
 
-.container{
-    height: 450px;
-    width: 350px;
-    background: rgba(255, 255, 255, 0.318);
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(255,255,255,.7);
-    padding: 10px;
-    overflow-y: auto;
+header {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-#to_do_input{
-    height: 50px;
-    outline: none;
+
+header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ed2e04;
+    text-shadow: 2px 2px 5px #000;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    width: 100%;
+    height: 20vh;
+    justify-content: space-between;
+}
+
+form input {
+    width: 75%;
+    font-size: 24px;
+    background-color: #223243;
     border: none;
-    border-radius: 10px;
-    background: rgba(207, 171, 171, 0.267);
-    color:#fff;
-    padding: 0 10px;
-    margin: 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #c6f7f1;
+    border-radius: 25px;
+    padding: 8px;
+    margin-right: 8px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+    outline: none;
 }
 
-#to_do_input::placeholder{
-    color: rgb(226, 224, 224);
+form input::placeholder {
+    color: rgb(66, 15, 249);
 }
 
-ul li{
+.btn-hover {
+    width: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    margin-right: 100px;
+    border-radius: 100%;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color {
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+ul {
+    width: 80%;
+
+}
+
+ul li {
+    width: 100%;
     background: #eee;
     color: #333;
     height: 40px;
@@ -56,30 +124,26 @@ ul li{
     margin: 10px 0;
     padding: 10px;
     position: relative;
+    list-style: none;
 }
 
-ul .fa-check, .fa-trash{
+ul .fa-check, .fa-trash {
     position: absolute;
     cursor: pointer;
 }
 
-ul .fa-check{
+ul .fa-check {
     right: 40px;
     color: seagreen;
 }
 
-ul .fa-trash{
+ul .fa-trash {
     right: 15px;
-    color:#ff0033;
+    color: #ff0033;
 }
 
-ul .checked{
+ul .checked {
     background: lightgreen;
-    text-decoration:line-through ;
+    text-decoration: line-through;
     transition: .3s ease;
 }
-
-
-
-
-
