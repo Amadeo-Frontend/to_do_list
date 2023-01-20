@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+input{
+   display: inline;
+   align-items: center;
+}
+
+.container{
+    height: 450px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.318);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(255,255,255,.7);
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#to_do_input{
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: rgba(207, 171, 171, 0.267);
+    color:#fff;
+    padding: 0 10px;
+    margin: 15px 0;
+}
+
+#to_do_input::placeholder{
+    color: rgb(226, 224, 224);
+}
+
+ul li{
+    background: #eee;
+    color: #333;
+    height: 40px;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+}
+
+ul .fa-check, .fa-trash{
+    position: absolute;
+    cursor: pointer;
+}
+
+ul .fa-check{
+    right: 40px;
+    color: seagreen;
+}
+
+ul .fa-trash{
+    right: 15px;
+    color:#ff0033;
+}
+
+ul .checked{
+    background: lightgreen;
+    text-decoration:line-through ;
+    transition: .3s ease;
+}
+
+
+
+
+
