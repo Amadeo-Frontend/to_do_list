@@ -1,8 +1,8 @@
+//
 $(document).ready(function () {
-  $("body").hide().fadeIn(2000);
-});
-
-$(document).ready(function () {
+  $(document).ready(function () {
+    $("body").hide().fadeIn(2000);
+  });
   $("#to_do_input").change(function () {
     let input = $(this).val();
     $("ul")
