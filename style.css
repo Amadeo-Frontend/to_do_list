@@ -147,3 +147,14 @@ ul .checked {
     text-decoration: line-through;
     transition: .3s ease;
 }
+
+@media (max-width: 767px) {
+    form input {
+        width: 250px;
+    }
+
+    .btn-hover {
+
+        margin: 20px 0;
+    }
+}
